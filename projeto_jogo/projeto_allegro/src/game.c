@@ -19,10 +19,12 @@
 #include "funcoes/funcoes_basicas_init.h"
 #include "funcoes/funcoes_anim.h"
 #include "funcoes/funcoes_colisao.h"
+#include "funcoes/funcoes_estruturas.h"
 
 ALLEGRO_DISPLAY* window = NULL;
 ALLEGRO_EVENT_QUEUE* fila_eventos = NULL;
 ALLEGRO_TIMER* timer = NULL;
+
 ALLEGRO_BITMAP* folha_sprites_personagem = NULL;
 ALLEGRO_BITMAP* folha_sprites_inimigo = NULL;
 ALLEGRO_BITMAP* fundo = NULL;
@@ -31,10 +33,14 @@ int main(void) {
 
     int desenha = 1;
     bool sair = false;
-    long pontuacao = 0;
+    long long pontuacao = 0;
+    int dificuldade = -1;
+    int colisoes = 0;
+    int i, posicaoCoracaoX = 30;
 
-    int LEX, LDX;
-    int LSY, LIY;
+    ALLEGRO_BITMAP* coracoes[5];
+
+    tElemento* vidas = inicializarListaComCabeca();
 
     tSprite boneco;
     tSprite inimigo;
@@ -48,12 +54,12 @@ int main(void) {
         return -1;
     };
 
-
+    inicializaCoracoesMorte(coracoes, &window);
+    inicializaCoracoesVida(vidas, &window);
 
     while(!sair) {
         ALLEGRO_EVENT evento;
         al_wait_for_event(fila_eventos, &evento);
-
 
 
         // Mudando a velocidade do boneco quando aperta RSHIFT
@@ -62,13 +68,13 @@ int main(void) {
             if( evento.keyboard.keycode == ALLEGRO_KEY_LSHIFT ) {
                 boneco.vel_x_sprite *= 2;
                 boneco.frames_sprite -= 2;
-                printf("LSHIFT PRESSIONADO\n");
+                //printf("LSHIFT PRESSIONADO\n");
             }
 
             if( evento.keyboard.keycode == ALLEGRO_KEY_SPACE ) {
                 if(boneco.pos_y_sprite >= 420) {
                     boneco.vel_y_sprite -= 6;
-                    printf("SPACE PRESSIONADO\n");
+                    //printf("SPACE PRESSIONADO\n");
                 }
             }
 
@@ -77,14 +83,21 @@ int main(void) {
             if( evento.keyboard.keycode == ALLEGRO_KEY_LSHIFT ) {
                 boneco.vel_x_sprite /= 2;
                 boneco.frames_sprite += 2;
-                printf("LSHIFT SOLTO\n");
+                //printf("LSHIFT SOLTO\n");
             }
             /*
             if( evento.keyboard.keycode == ALLEGRO_KEY_SPACE ) {
                 boneco.vel_y_sprite += 12;
             }*/
         }
-
+/*
+        dificuldade = pontuacao % 1000;
+        if( dificuldade == 0 ) {
+            printf("VELO: %lf\n", inimigo.vel_x_sprite);
+            inimigo.vel_x_sprite++;
+            inimigo.frames_sprite--;
+        }
+*/
 
         /*- EVENTOS -*/
         if(evento.type == ALLEGRO_EVENT_TIMER) {
@@ -97,12 +110,12 @@ int main(void) {
             mudarSprite(&inimigo);
             
             // Verifica se os sprite ta perto das bordas X da tela
-            if( boneco.pos_x_sprite > LARGURA_TELA - 150 || boneco.pos_x_sprite < 20) {
+            if( boneco.pos_x_sprite > LARGURA_TELA - 120 || boneco.pos_x_sprite < 20) {
                 // Inverte o sentido da velocidade X pra andar ao contrario
                 boneco.vel_x_sprite = -boneco.vel_x_sprite;
             } 
 
-            if( inimigo.pos_x_sprite > LARGURA_TELA - 150 || inimigo.pos_x_sprite < 20) {
+            if( inimigo.pos_x_sprite > LARGURA_TELA - 120 || inimigo.pos_x_sprite < 20) {
                 // Inverte o sentido da velocidade X pra andar ao contrario
                 inimigo.vel_x_sprite = -inimigo.vel_x_sprite;
             } 
@@ -114,7 +127,7 @@ int main(void) {
             } 
             else if ( boneco.pos_y_sprite <= ALTURA_MAXIMA_PULO ) {
                 boneco.vel_y_sprite += 12;
-            }
+            }            
 
             //atualiza as posicoes X Y do sprite de acordo com a velocidade, positiva ou negativa
             boneco.pos_x_sprite += boneco.vel_x_sprite;
@@ -125,8 +138,8 @@ int main(void) {
 
             // Pontuacao baseada no quanto o usuario conseguiu percorrer sem morrer
             pontuacao += abs(boneco.vel_x_sprite);
-
-            printf("%i\n",pontuacao);
+            
+            //printf("%i\n",pontuacao);
 
             // Gera retangulos que vao ser usados na colisao.
             retanguloBoneco  = gerarRetangulo(&boneco);
@@ -134,13 +147,9 @@ int main(void) {
 
             // Testa colisao, se colidir repele os objetos
             if( colisao(retanguloBoneco, retanguloInimigo) ) {
-
+                colisoes++;
                 tratamentoDeColisao(&boneco, &inimigo);
-
-//                boneco.vel_x_sprite = -boneco.vel_x_sprite;
-//                inimigo.vel_x_sprite = -inimigo.vel_x_sprite;
             }
-
 
             desenha = 1;
         }
@@ -154,32 +163,29 @@ int main(void) {
             
             desenhaPersonagem(&inimigo, folha_sprites_inimigo);
             desenhaPersonagem(&boneco, folha_sprites_personagem);
-            
+
+            carregarImgP(&window, &coracoes[0], 30, 30);
+            carregarImgP(&window, &coracoes[1], 100, 30);
+            carregarImgP(&window, &coracoes[2], 170, 30);
+            carregarImgP(&window, &coracoes[3], 240, 30);
+            carregarImgP(&window, &coracoes[4], 310, 30);
+
             desenha = 0;
 
-//            LDX = boneco.pos_x_sprite + (boneco.largura_sprite);
-//            LIY = boneco.pos_y_sprite - (boneco.altura_sprite/100);
-//            LEX = boneco.pos_x_sprite - (boneco.largura_sprite/2);
-//            LSY = boneco.pos_y_sprite + (boneco.altura_sprite/2);
-//
-//            // CALCULAR CORRETAMENTE ESSES VALORES COM WASHIGTONk
-//            //                 L.D.X / L.I.Y / L.E.X / L.S.Y
-//            //al_draw_rectangle(  LDX,    LIY,    LEX,    LSY, al_map_rgb(255,0,0), 1 );
-//
-//            //al_draw_rectangle(inicioX, inicioY, fimX, fimY, al_map_rgb(255, 0,0), 1.0);
-//
-//            //al_draw_rectangle()
             al_flip_display();
         }
 
     }
-        
+    
+    (double) pontuacao;
+    pontuacao = pontuacao/100;
     printf("PONTUACAO: %i\n", pontuacao);
     al_destroy_display(window);
     al_destroy_event_queue(fila_eventos);
     al_destroy_timer(timer);
     al_destroy_bitmap(folha_sprites_personagem);
+    al_destroy_bitmap(folha_sprites_inimigo);
     al_destroy_bitmap(fundo);   
-   
+       
    return 0;  
 }

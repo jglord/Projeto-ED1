@@ -5,6 +5,8 @@
 #include <allegro5/allegro_image.h>
 #include <allegro5/allegro_native_dialog.h>
 
+#include "funcoes_estruturas.h"
+
 #define FPS 60.0
 #define LARGURA_TELA 800
 #define ALTURA_TELA 600
@@ -44,6 +46,9 @@ bool inicializarSprite(ALLEGRO_DISPLAY** window,
 
 bool inicializarWindow(ALLEGRO_DISPLAY** window);
 
-bool carregarImgP(ALLEGRO_DISPLAY** window, ALLEGRO_BITMAP** img,char* file, float px, float py);
+bool carregarImgP(ALLEGRO_DISPLAY** window, ALLEGRO_BITMAP** img, float px, float py);
 
 char* catPath(char* path);
+
+bool inicializaCoracoesMorte(ALLEGRO_BITMAP **coracoes, ALLEGRO_DISPLAY **window);
+bool inicializaCoracoesVida(tElemento* cabeca, ALLEGRO_DISPLAY **window);

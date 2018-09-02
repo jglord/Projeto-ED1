@@ -52,4 +52,9 @@ void tratamentoDeColisao(tSprite* boneco, tSprite* inimigo) {
         boneco->vel_x_sprite = -boneco->vel_x_sprite;
         inimigo->vel_x_sprite = inimigo->vel_x_sprite;
     }
+    else if( boneco->vel_x_sprite < 0 && inimigo->vel_x_sprite > 0 ) {
+
+        boneco->vel_x_sprite = abs(boneco->vel_x_sprite);
+        inimigo->vel_x_sprite = -inimigo->vel_x_sprite; 
+    }
 }

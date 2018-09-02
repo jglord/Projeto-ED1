@@ -1,6 +1,5 @@
 #include "funcoes_anim.h"
 
-
 void mudarSprite(tSprite* boneco) {
     // Se alcancar a quantidade de frames necessaria pra mudar o sprite
     if(boneco->cont_frames >= boneco->frames_sprite) {
@@ -74,13 +73,13 @@ void variaveisInimigo(tSprite* inimigo) {
     // largura e altura de cada sprite dentro da folha
     inimigo->altura_sprite=140, inimigo->largura_sprite=108;
     // quantos sprites tem em cada linha da folha, e a atualmente mostrada
-    inimigo->colunas_folha=4, inimigo->coluna_atual=0;
+    inimigo->colunas_folha=2, inimigo->coluna_atual=0;
     // quantos sprites tem em cada coluna da folha, e a atualmente mostrada
     inimigo->linha_atual=0, inimigo->linhas_folha=2;
     // posicoes X e Y da folha de sprites que serao mostradas na tela
     inimigo->regiao_x_folha=0, inimigo->regiao_y_folha=0;
     // quantos frames devem se passar para atualizar para o proximo sprite
-    inimigo->frames_sprite=5, inimigo->cont_frames=0;
+    inimigo->frames_sprite=10, inimigo->cont_frames=0;
     // posicao X Y da janela em que sera mostrado o sprite
     inimigo->pos_x_sprite=500, inimigo->pos_y_sprite=420;
     // velocidade X Y que o sprite ira se mover pela janela
