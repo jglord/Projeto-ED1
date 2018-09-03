@@ -13,4 +13,4 @@ typedef struct sElemento {
 tElemento* inicializarListaComCabeca();
 void inserirElementoInicio(tElemento* cabeca, ALLEGRO_BITMAP** img);
 bool verificarVidas(tElemento* cabeca);      // Percorre a lista, exibe os itens e retorna a quantidade;
-void removerFinal(tElemento* cabeca);
+tElemento* removerFinalLista(tElemento *cabeca);

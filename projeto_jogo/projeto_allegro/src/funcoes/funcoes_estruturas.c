@@ -4,7 +4,7 @@
 tElemento* inicializarListaComCabeca() {
 
     tElemento* cabecaDaLista = (tElemento*) calloc(1, sizeof(tElemento));
-    cabecaDaLista->id = 1;
+    cabecaDaLista->id = 0;
 
     cabecaDaLista->img = NULL;
 
@@ -28,17 +28,24 @@ void inserirElementoInicio(tElemento* cabeca, ALLEGRO_BITMAP** img) {
     cabeca->proxElemento = novoElemento;
 }
 
-void removerFinal(tElemento* cabeca) {
+tElemento* removerFinalLista(tElemento *cabeca) {
 
-    int i = 0;
     tElemento* p = cabeca->proxElemento;
-    tElemento *anteriorP = NULL;
+    tElemento* anteriorP = NULL;
 
-    while(p != NULL) {
-        i++;
+    if( p == NULL ) {
+        return NULL;
+    } else if( p->proxElemento == NULL ) {
+        cabeca->proxElemento = NULL;
+        return p;
+    }
+
+    while(p->proxElemento != NULL) {
         anteriorP = p;
         p = p->proxElemento;
     }
 
     anteriorP->proxElemento = NULL;
+    return p;
 }
+

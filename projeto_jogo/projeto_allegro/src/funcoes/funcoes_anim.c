@@ -1,4 +1,5 @@
 #include "funcoes_anim.h"
+#include "funcoes_estruturas.h"
 
 void mudarSprite(tSprite* boneco) {
     // Se alcancar a quantidade de frames necessaria pra mudar o sprite
@@ -84,4 +85,35 @@ void variaveisInimigo(tSprite* inimigo) {
     inimigo->pos_x_sprite=500, inimigo->pos_y_sprite=420;
     // velocidade X Y que o sprite ira se mover pela janela
     inimigo->vel_x_sprite=5, inimigo->vel_y_sprite=0;
+}
+
+ALLEGRO_BITMAP* retornarImgLista(tElemento*cabeca, int idBuscado) {
+
+    tElemento* p = cabeca->proxElemento;
+
+    while(p != NULL) {
+
+        if(p->id == idBuscado) {
+            return p->img;
+        }
+        p = p->proxElemento;
+
+    }
+
+    return NULL;
+}
+
+tElemento* buscar(tElemento* cabeca,int id) {
+
+    tElemento* p = cabeca->proxElemento;
+
+    while(p != NULL) {
+
+        if(p->id == id) {
+            return p;
+        }
+        p = p->proxElemento;
+
+    }
+    return NULL;
 }

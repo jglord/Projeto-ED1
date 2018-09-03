@@ -29,6 +29,8 @@ ALLEGRO_BITMAP* folha_sprites_personagem = NULL;
 ALLEGRO_BITMAP* folha_sprites_inimigo = NULL;
 ALLEGRO_BITMAP* fundo = NULL;
 
+ALLEGRO_BITMAP* coracaoVermelho = NULL;
+
 int main(void) {
 
     int desenha = 1;
@@ -36,7 +38,8 @@ int main(void) {
     long long pontuacao = 0;
     int dificuldade = -1;
     int colisoes = 0;
-    int i, posicaoCoracaoX = 30;
+    int i, j = 0;
+    int valoresPosicaoCoracaoCinza[] = {30, 100, 170, 240, 310};
 
     ALLEGRO_BITMAP* coracoes[5];
 
@@ -148,7 +151,12 @@ int main(void) {
             // Testa colisao, se colidir repele os objetos
             if( colisao(retanguloBoneco, retanguloInimigo) ) {
                 colisoes++;
+                if( colisoes == 5) {
+                    printf("bla");
+                }
+                j++;
                 tratamentoDeColisao(&boneco, &inimigo);
+                removerFinalLista(vidas);
             }
 
             desenha = 1;
@@ -164,11 +172,17 @@ int main(void) {
             desenhaPersonagem(&inimigo, folha_sprites_inimigo);
             desenhaPersonagem(&boneco, folha_sprites_personagem);
 
-            carregarImgP(&window, &coracoes[0], 30, 30);
-            carregarImgP(&window, &coracoes[1], 100, 30);
-            carregarImgP(&window, &coracoes[2], 170, 30);
-            carregarImgP(&window, &coracoes[3], 240, 30);
-            carregarImgP(&window, &coracoes[4], 310, 30);
+            // Carrega imagem dos coraçoes cinzas e vermelhos
+            for(i = 0; i < 5; i++) {
+                carregarImgP(&window, &coracoes[i], valoresPosicaoCoracaoCinza[i], 30);
+
+                    coracaoVermelho = retornarImgLista(vidas, i);
+                    if( coracaoVermelho != NULL) {
+                        carregarImgP(&window, &coracaoVermelho, valoresPosicaoCoracaoCinza[i], 30);
+                    }
+
+
+            }
 
             desenha = 0;
 
