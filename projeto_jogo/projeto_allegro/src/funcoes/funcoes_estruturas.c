@@ -1,6 +1,6 @@
 #include "funcoes_estruturas.h"
 
-
+// Inicializa a cabeca da lista
 tElemento* inicializarListaComCabeca() {
 
     tElemento* cabecaDaLista = (tElemento*) calloc(1, sizeof(tElemento));
@@ -13,6 +13,7 @@ tElemento* inicializarListaComCabeca() {
     return cabecaDaLista;
 }
 
+// Insera elementos no inicio da lista
 void inserirElementoInicio(tElemento* cabeca, ALLEGRO_BITMAP** img) {
 
     tElemento* novoElemento = (tElemento*) calloc(1, sizeof(tElemento));
@@ -28,6 +29,7 @@ void inserirElementoInicio(tElemento* cabeca, ALLEGRO_BITMAP** img) {
     cabeca->proxElemento = novoElemento;
 }
 
+// Remove elementos do final da lista
 tElemento* removerFinalLista(tElemento *cabeca) {
 
     tElemento* p = cabeca->proxElemento;
@@ -48,4 +50,23 @@ tElemento* removerFinalLista(tElemento *cabeca) {
     anteriorP->proxElemento = NULL;
     return p;
 }
+
+// Busca alguma imagem e a retorna
+ALLEGRO_BITMAP* retornarImgLista(tElemento*cabeca, int idBuscado) {
+
+    tElemento* p = cabeca->proxElemento;
+
+    while(p != NULL) {
+
+        if(p->id == idBuscado) {
+            return p->img;
+        }
+        p = p->proxElemento;
+
+    }
+
+    return NULL;
+}
+
+
 

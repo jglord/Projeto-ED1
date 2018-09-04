@@ -3,7 +3,6 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="projeto_allegro" targetName="projeto_allegro" />
-      <config projectName="projeto_allegro" targetName="lallegro" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -12,7 +11,20 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a93c07-fe0f-4a23-b6ea-f57c99be3ff8" name="Default Changelist" comment="" />
+    <list default="true" id="99a93c07-fe0f-4a23-b6ea-f57c99be3ff8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../arquivos_aleatorios/ranking.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../arquivos_aleatorios/ranking.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jogo" beforeDir="false" afterPath="$PROJECT_DIR$/Jogo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_anim.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_anim.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_anim.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_anim.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_colisao.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_colisao.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game.c" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,17 +69,23 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="512095026">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/imagens/imgsJonSnow/jon_snow_teste.c">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#29#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="265">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -75,7 +93,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -112,24 +130,6 @@
               <item name="projeto_allegro" type="b2602c69:ProjectViewProjectNode" />
               <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="projeto_allegro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
-              <item name="imagens" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projeto_allegro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
-              <item name="imagens" type="462c0819:PsiDirectoryNode" />
-              <item name="imgsJonSnow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projeto_allegro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
-              <item name="imagens" type="462c0819:PsiDirectoryNode" />
-              <item name="imgsJonSnow" type="462c0819:PsiDirectoryNode" />
-              <item name="imgs" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -160,11 +160,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="lallegro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projeto_allegro" TARGET_NAME="lallegro" CONFIG_NAME="Debug">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="projeto_allegro" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="projeto_allegro" TARGET_NAME="projeto_allegro" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="projeto_allegro" RUN_TARGET_NAME="projeto_allegro">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -172,7 +167,6 @@
     </configuration>
     <list>
       <item itemvalue="Application.Build All" />
-      <item itemvalue="Application.lallegro" />
       <item itemvalue="Application.projeto_allegro" />
     </list>
   </component>
@@ -189,11 +183,12 @@
       <workItem from="1533789171571" duration="4143000" />
       <workItem from="1533825160670" duration="890000" />
       <workItem from="1533996489931" duration="280000" />
+      <workItem from="1536022330250" duration="76000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5313000" />
+    <option name="totallyTimeSpent" value="5389000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -205,9 +200,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-1" width="1922" height="1038" extended-state="6" />
+    <frame x="-1" y="28" width="1368" height="689" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25506938" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25906345" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -218,7 +213,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32928178" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32807016" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32928178" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.32928178" />
@@ -241,20 +236,10 @@
         <state relative-caret-position="-405" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
-          <folding>
-            <element signature="e#28#57#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -265,13 +250,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imagens/imgsJonSnow/jon_snow_teste.c">
+    <entry file="file://$PROJECT_DIR$/imagens/imgsJonSnow/jon_snow_teste.c" />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="54" column="55" selection-start-line="54" selection-start-column="55" selection-end-line="54" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="265">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

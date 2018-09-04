@@ -10,39 +10,25 @@
 #include "funcoes_basicas_init.h"
 #include "funcoes_estruturas.h"
 
-// Macros
-
 void error_msg(char* text, ALLEGRO_DISPLAY* window) {
     al_show_native_message_box(window, "ERRO",
         "Ocorreu o seguinte erro e o programa será finalizado:",
         text, NULL, ALLEGRO_MESSAGEBOX_ERROR);
 }    
 
+// Inicializa as variaveis essenciais da ALLEGRO
 bool inicializarSprite(ALLEGRO_DISPLAY** window, 
                  ALLEGRO_TIMER** timer,
                  ALLEGRO_EVENT_QUEUE** fila_eventos,
                  ALLEGRO_BITMAP** folha_sprites_personagem,
                  ALLEGRO_BITMAP** folha_sprites_inimigo,
-                 ALLEGRO_BITMAP** fundo
+                 ALLEGRO_BITMAP** fundo,
+                 ALLEGRO_BITMAP** gameOver
                 )
 {
-    if( !al_init() ) {
-        error_msg("Falha ao inicializar a Allegro!", *window);
-        return false;
-    }
 
-    if( !al_install_keyboard() ) {
-        error_msg("Falha ao inicializar teclado!", *window);
+    if( !initAllegro(&window) ) {
         return false;
-    }
-
-    if( !al_init_image_addon() ) {
-        error_msg("Falha ao inicializar o addon de imagens!", *window);
-        return false;
-    }
-
-    if( !al_init_primitives_addon() ) {
-        error_msg("Falha ao inicializar o addon de primitivas!", *window);
     }
 
     *timer = al_create_timer(1.0/FPS);
@@ -101,11 +87,49 @@ bool inicializarSprite(ALLEGRO_DISPLAY** window,
         al_destroy_bitmap(*folha_sprites_personagem);
         return 0;
     }
+    
+    *gameOver = al_load_bitmap("/home/jglord/Workspace/Projeto-ED1/projeto_jogo/projeto_allegro/imagens/gameOver.png");
+    if (!*gameOver){
+        error_msg("Falha ao carregar GAMEOVER", *window);
+        al_destroy_timer(*timer);
+        al_destroy_display(*window);
+        al_destroy_event_queue(*fila_eventos);
+        al_destroy_bitmap(*folha_sprites_personagem);
+        al_destroy_bitmap(*fundo);
+        return 0;
+    }
+
 
     al_register_event_source(*fila_eventos, al_get_display_event_source(*window));
     al_register_event_source(*fila_eventos, al_get_timer_event_source(*timer));
     al_register_event_source(*fila_eventos, al_get_keyboard_event_source());
     al_start_timer(*timer);
+
+    return true;
+}
+
+// Inicializa as bibliotecas allegro
+bool initAllegro(ALLEGRO_DISPLAY** window) {
+
+    if( !al_init() ) {
+        error_msg("Falha ao inicializar a Allegro!", *window);
+        return false;
+    }
+
+    if( !al_install_keyboard() ) {
+        error_msg("Falha ao inicializar teclado!", *window);
+        return false;
+    }
+
+    if( !al_init_image_addon() ) {
+        error_msg("Falha ao inicializar o addon de imagens!", *window);
+        return false;
+    }
+
+    if( !al_init_primitives_addon() ) {
+        error_msg("Falha ao inicializar o addon de primitivas!", *window);
+        return false;
+    }
 
     return true;
 }
@@ -131,7 +155,7 @@ bool inicializarWindow(ALLEGRO_DISPLAY** window) {
     return true;
 }
 
-// Carrega imagem posicionada em algum ponto da tela
+// Carrega imagem posicionada em algum ponto (XY) da tela
 bool carregarImgP(ALLEGRO_DISPLAY** window, ALLEGRO_BITMAP** img, float px, float py) {
 
     // Carrega o bitmap em *img
@@ -164,6 +188,7 @@ bool inicializaCoracoesMorte(ALLEGRO_BITMAP** coracoes, ALLEGRO_DISPLAY **window
     return true;
 }
 
+// Enfilera os coracoes na lista, inserindo no inicio dela.
 bool inicializaCoracoesVida(tElemento* cabeca, ALLEGRO_DISPLAY **window) {
 
     int i;

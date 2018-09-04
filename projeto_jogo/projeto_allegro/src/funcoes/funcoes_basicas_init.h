@@ -25,9 +25,9 @@ typedef struct sprite {
     //quantos frames devem se passar para atualizar para o proximo sprite
     int frames_sprite, cont_frames;
     //posicao X Y da janela em que sera mostrado o sprite
-    int pos_x_sprite, pos_y_sprite;
+    double pos_x_sprite, pos_y_sprite;
     //velocidade X Y que o sprite ira se mover pela janela
-    int vel_x_sprite, vel_y_sprite;
+    double vel_x_sprite, vel_y_sprite;
 } tSprite;
 
 // Exibe uma mensagem de erro na tela e diz qual foi o problema
@@ -39,10 +39,12 @@ bool inicializarSprite(ALLEGRO_DISPLAY** window,
                  ALLEGRO_EVENT_QUEUE** fila_eventos,
                  ALLEGRO_BITMAP** folha_sprites_personagem,
                  ALLEGRO_BITMAP** folha_sprites_inimigo,
-                 ALLEGRO_BITMAP** fundo
+                 ALLEGRO_BITMAP** fundo,
+                 ALLEGRO_BITMAP** gameOver
+
                 );
 
-
+bool initAllegro();
 
 bool inicializarWindow(ALLEGRO_DISPLAY** window);
 

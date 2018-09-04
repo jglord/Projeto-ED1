@@ -60,7 +60,6 @@ void shellSort(player* players, int size) {
     int i, j;
     player eleito;
 
-
     while(h < size) {
         h = 3 * h + 1;
     }
@@ -68,7 +67,7 @@ void shellSort(player* players, int size) {
     while(h > 1) {
         h = h / 3;
 
-        for(i = h; i < size; i++) {
+        for(i = h; i < size-1; i++) {
             eleito = players[i];
             j = i - h;
 

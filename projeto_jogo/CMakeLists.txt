@@ -18,6 +18,8 @@ add_executable(projeto_allegro
         projeto_allegro/src/funcoes/funcoes_colisao.h
         projeto_allegro/src/funcoes/funcoes_estruturas.c
         projeto_allegro/src/funcoes/funcoes_estruturas.h
+        projeto_allegro/src/funcoes/funcoes_ranking.c
+        projeto_allegro/src/funcoes/funcoes_ranking.h
         projeto_allegro/src/game.c
         projeto_allegro/BaR.sh)
 

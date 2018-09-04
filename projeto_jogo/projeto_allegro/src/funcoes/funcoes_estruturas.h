@@ -14,3 +14,4 @@ tElemento* inicializarListaComCabeca();
 void inserirElementoInicio(tElemento* cabeca, ALLEGRO_BITMAP** img);
 bool verificarVidas(tElemento* cabeca);      // Percorre a lista, exibe os itens e retorna a quantidade;
 tElemento* removerFinalLista(tElemento *cabeca);
+ALLEGRO_BITMAP* retornarImgLista(tElemento*cabeca, int idBuscado);
