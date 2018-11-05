@@ -13,22 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cfe5721-c632-4583-9baa-5d326e74ac8b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../arquivos_aleatorios/ranking.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../arquivos_aleatorios/ranking.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arquivos_aleatorios/ranking.c" beforeDir="false" afterPath="$PROJECT_DIR$/../arquivos_aleatorios/ranking.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projeto_allegro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/BaR.sh" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/BaR.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/Jogo" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/Jogo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_anim.c" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_anim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_anim.h" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_anim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_basicas_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_basicas_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_basicas_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_basicas_init.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_colisao.c" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_colisao.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_estruturas.c" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_estruturas.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_estruturas.h" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_estruturas.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/projeto_allegro/src/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_allegro/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/projeto_allegro/src/funcoes/rank" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -43,26 +31,27 @@
     <session id="-1161114634">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.13" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.26" value="1" />
           <entry key="project.open.time.27" value="3" />
-          <entry key="project.open.time.28" value="2" />
+          <entry key="project.open.time.28" value="3" />
           <entry key="project.open.time.29" value="1" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.36" value="2" />
+          <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.39" value="1" />
           <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.42" value="1" />
           <entry key="project.open.time.43" value="1" />
-          <entry key="project.opened" value="24" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -143,13 +132,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/projeto_allegro/src/game.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="221" column="40" selection-start-line="221" selection-start-column="40" selection-end-line="221" selection-end-column="40" />
+            <state relative-caret-position="60">
+              <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
               <folding>
-                <element signature="e#294#312#0" expanded="true" />
                 <element signature="e#381#410#0" expanded="true" />
                 <element signature="e#559#600#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -223,13 +220,6 @@
               <item name="projeto_jogo" type="462c0819:PsiDirectoryNode" />
               <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="projeto_allegro" type="b2602c69:ProjectViewProjectNode" />
-              <item name="projeto_jogo" type="462c0819:PsiDirectoryNode" />
-              <item name="projeto_allegro" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="funcoes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -315,11 +305,16 @@
       <workItem from="1536093984048" duration="117000" />
       <workItem from="1536095043946" duration="58000" />
       <workItem from="1536098696093" duration="370000" />
+      <workItem from="1536102580187" duration="42000" />
+      <workItem from="1536102935950" duration="45000" />
+      <workItem from="1536103171305" duration="131000" />
+      <workItem from="1536104731960" duration="400000" />
+      <workItem from="1539992518884" duration="264000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54179000" />
+    <option name="totallyTimeSpent" value="55061000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -332,14 +327,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="689" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988067" visible="true" weight="0.21374622" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4988067" visible="true" weight="0.22885196" />
       <window_info id="Structure" order="1" sideWeight="0.50119334" side_tool="true" weight="0.19561933" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.34210527" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.05964912" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25438598" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.21052632" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -410,16 +404,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto_allegro/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto_allegro/CMakeLists.txt" />
     <entry file="file://$PROJECT_DIR$/projeto_allegro/src/funcoes/funcoes_basicas_init.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="557">
@@ -438,18 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projeto_allegro/src/game.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="221" column="40" selection-start-line="221" selection-start-column="40" selection-end-line="221" selection-end-column="40" />
-          <folding>
-            <element signature="e#294#312#0" expanded="true" />
-            <element signature="e#381#410#0" expanded="true" />
-            <element signature="e#559#600#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -474,6 +447,24 @@
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projeto_allegro/src/game.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="79" column="4" lean-forward="true" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+          <folding>
+            <element signature="e#381#410#0" expanded="true" />
+            <element signature="e#559#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>

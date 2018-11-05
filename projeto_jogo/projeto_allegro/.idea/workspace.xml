@@ -12,18 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99a93c07-fe0f-4a23-b6ea-f57c99be3ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../arquivos_aleatorios/ranking.c" beforeDir="false" afterPath="$PROJECT_DIR$/../../arquivos_aleatorios/ranking.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jogo" beforeDir="false" afterPath="$PROJECT_DIR$/Jogo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_anim.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_anim.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_anim.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_anim.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_basicas_init.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_colisao.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_colisao.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/funcoes/funcoes_estruturas.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/game.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/funcoes/rank" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,9 +62,10 @@
     <session id="512095026">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -84,7 +75,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
+            <state relative-caret-position="285">
               <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
@@ -123,6 +114,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -134,7 +126,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -184,11 +175,12 @@
       <workItem from="1533825160670" duration="890000" />
       <workItem from="1533996489931" duration="280000" />
       <workItem from="1536022330250" duration="76000" />
+      <workItem from="1536103154369" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5389000" />
+    <option name="totallyTimeSpent" value="5404000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -202,7 +194,7 @@
   <component name="ToolWindowManager">
     <frame x="-1" y="28" width="1368" height="689" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25906345" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26283988" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -253,7 +245,7 @@
     <entry file="file://$PROJECT_DIR$/imagens/imgsJonSnow/jon_snow_teste.c" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
+        <state relative-caret-position="285">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
